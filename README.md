@@ -35,3 +35,5 @@ b) POI library path and home directory needs to update accordingly
 
 c) home directory must contain following functions: ‘R0calc.m’, ‘xlwrite.m’ and ‘Func_replace_string.m’
 
+Additional instructions are given in the readme file in the folder to generate figures
+
