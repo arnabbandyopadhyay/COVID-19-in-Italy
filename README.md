@@ -9,6 +9,8 @@ mmh@theoretical-biology.de
 arnab.bandyopadhyay@theoretical-biology.de 
 marta.schips@theoretical-biology.de
 
+https://www.medrxiv.org/content/10.1101/2020.10.12.20211169v1
+
  **system requirements:**
  
 MATLAB (best R2018b or newer)
