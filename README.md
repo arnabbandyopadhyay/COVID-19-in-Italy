@@ -39,3 +39,5 @@ c) home directory must contain following functions: ‘R0calc.m’, ‘xlwrite.m
 
 Additional instructions are given in the readme file in the folder to generate figures
 
+Data_upto_23_July contain data of all regions as of 23 July, 2020 and downloaded from https://github.com/pcm-dpc/COVID-19
+
