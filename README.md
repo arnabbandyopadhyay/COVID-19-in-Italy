@@ -33,7 +33,7 @@ Model equations, observables and initial conditions are declared in the model fi
 
 ‘last_model_t_undetected_loop.def’ is used in windowing and all initial conditions are empty as the initial conditions of current window is filled by the state space of the previous window and is modified on the way 
 
-b) POI library path and home directory needs to update accordingly 
+b) POI library path and home directory needs to be updated accordingly 
 
 c) home directory must contain following functions: ‘R0calc.m’, ‘xlwrite.m’ and ‘Func_replace_string.m’
 
