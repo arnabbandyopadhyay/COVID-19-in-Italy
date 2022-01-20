@@ -1,0 +1,147 @@
+DESCRIPTION
+// Stores meta information about the model
+"Binder et al. 2013"
+
+
+PREDICTOR
+// define predictor/independent variable
+// [identifier, unitType, "unit", "label", minRange, maxRange]  
+t           T   "h"   "time"  0   7
+
+COMPARTMENTS
+// define compartments of the system
+// [identifier, unitType, "unit", "label", size]
+// size can be estimated -> leave size empty and change using arSetPars
+// leave section empty if no compartment is needed
+
+STATES
+// species changing over time
+// [identifier, unitType, "unit", "label" (e.g. "conc"), compartment,
+//  plot (1/0), "speciesLabel", alwaysPositive (1,0) ]   
+x1          C   "#"    "conc."  
+x2          C   "#"    "conc."  
+x3              C   "#"    "conc."  
+x4             C   "#"    "conc."  
+x5           C   "#"    "conc."  
+x6              C   "#"    "conc."  
+x7             C   "#"    "conc."  
+x8             C   "#"    "conc."
+x9             C   "#"    "conc."  
+x10             C   "#"    "conc." 
+x11             C   "#"    "conc."
+x12             C   "#"    "conc." 
+x13             C   "#"    "conc." 
+x14             C   "#"    "conc."
+
+INPUTS
+// Define input over independent variable
+// [identifier, unitType, "unit", "label", mathematicalExpression]
+
+s1   C  nm  conc. "step1(t, 1, 200, 0.0000001)"
+s2   C  nm  conc. "step1(t, 0.0000001, 48, 1)"
+
+//REACTIONS
+// can be defined by ODEs or biochemical reactions
+// For reactions:
+// [substrate -> product, reactionType, "ractionRate", "label"] 
+
+ODES
+// for every species one line with the "mathematical expressions"
+// e.g. "k1 * x - k2 * y"
+
+"-r1*(x3+x4+ki*x14+bet*(x5+x6))*x1/10060574"     // sus x1
+"r1*(x3+x4+ki*x14+bet*(x5+x6))*x1/10060574 -(r3/(r3*5.2 -1))*x2"     // exposed x2
+"(1-alpha)*(r3/(r3*5.2 -1))*x2 - r3*x3" //car x3
+"alpha*(r3/(r3*5.2 -1))*x2 - x4*(2*r3*r4/(2*r4+r3))" //car2 x4
+"((1-und)/(1-alpha))*rho*r3*x3-r6*x5" //inf x5 use r6 
+"((1-und)/(1-alpha))*(1-rho)*r3*x3-r4*x6" //inf2 x6
+"thet*r6*x5 - r7*x7" //hos x7 use r7
+"(1-thet)*r6*x5 - x8*r5" //hos2 x8
+"delta*r7*x7 - r10*x9" // Icu x9
+"(1-delta)*r7*x7 - x10*r8" //icu2 x10 use r8
+"x8*r5 + x10*r8"  // rec x11
+"r10*x9"  //dead x12 use d
+"x6*r4 + x4*(2*r3*r4/(2*r4+r3))+r4*x14"  //rec residual
+"(1-((1-und)/(1-alpha)))*r3*x3-r4*x14" //infUND x14
+
+DERIVED
+// variables derived from dynamic and input variables 
+// can be used in OBSERVABLES and REACTIONS sections
+// [identifier, unitType, "unit", "label", "mathematicalExpression"]
+//infected    C   "#"    "conc."         "x4+x5+x6"
+//bmiggo     C   "#"    "conc."        "frac2*bmigg*100/(bgc)"
+//bpiggo    C   "#"     "conc."        "frac3*bpigg*100/(bgc)" // 2160
+
+
+OBSERVABLES
+// optional in model deifnition file
+// [identifier, unitType, "unit", "xlabel", flagScaleMaxTo1, flagUseLog10Scale, mathematicalExpression]
+//qua    C   "#"    "conc."                     0               0    "(1-bet)*x4"
+qua    C   "#"    "conc."                     0               0    "x5+x6"
+hos    C   "#"    "conc."                     0               0    "x7+x8"
+icu    C   "#"    "conc."                     0               0    "x9+x10"
+recN    C   "#"    "conc."                     0               0    "x11"
+dead    C   "#"    "conc."                     0               0    "x12"
+
+
+
+
+
+ERRORS
+// measurement noise for every observable
+// [identifier, mathematicalExpressionForNoise]
+// Alternatively:
+// Define noise in data sheet: observable name + _std
+// change ar.config.fiterrors = -1 and for visualization 
+// change ar.config.ploterrots = 1
+qua   "sd_qua"
+hos   "sd_hos"
+icu   "sd_icu"
+recN   "sd_rec"
+dead   "sd_dead"
+
+
+SUBSTITUTIONS
+
+
+CONDITIONS
+// Define initial conditions   
+init_x1
+init_x2
+init_x3
+init_x4
+init_x5
+init_x6
+init_x7
+init_x8
+init_x9
+init_x10
+init_x11
+init_x12
+init_x13
+init_x14
+
+
+PARAMETERS
+// optinal section
+// can be used to save final parameters
+// label    value       qFit    qLog10  lbExtern    ubExtern      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
