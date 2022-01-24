@@ -1,4 +1,4 @@
-# Cluster isolation and targeted testing could have prevented overloaded health care facilities and reduced hospitalization and death rates in the SARS-CoV-2 pandemic in Italy
+# Testing and isolation to prevent overloaded health care facilities and to reduce death rates in the SARS-CoV-2 pandemic in Italy
 
 Arnab Bandyopadhyay*, Marta Schips*, Tanmay Mitra, Sahamoddin Khailaie, Sebastian Binder, Michael Meyer-Hermann*
 
