@@ -33,11 +33,17 @@ PARALLEL folder contains two folders, Capacity and Reference_Asymptomatic. Refer
 
 **Important to keep in mind**
 
-a) Model equations, observables and initial conditions are declared in the model files. ‘last_model_t_undetected.def’ is used to estimate the parameters by fitting the first 14 days of data points considering exponential growth. Susceptible and exposed state equations and corresponding initial conditions are empty as the susceptible and exposed amount is different for different regions and are filled while evaluating the relevant .m file
+a) Model equations, observables and initial conditions are declared in the model files in Models folder. For example, 'model_Italy.def' is a template file where susceptible and exposed state equations and corresponding initial conditions are empty as the susceptible and exposed amount is different for different regions and are filled ('model_2_Italy.def') while evaluating the relevant .m file. 'model_2_*region_name*.def' was used to estimate the parameters by fitting the first 14 days of data points considering exponential growth. 
 
-‘last_model_t_undetected_loop.def’ is used in windowing and all initial conditions are empty as the initial conditions of current window is filled by the state space of the previous window and is modified on the way 
+‘model_loop_2_*region_name*.def’ is a template file where all initial conditions are empty as the initial conditions of current window is filled by the state space of the previous window and is modified on the way. This file was used in windowing procedure.
 
-b) POI library path and home directory needs to be updated accordingly 
+'setup_reference.m' file in Reference_Asymptomatic folder will modify the template files and contunue parameter estimation process by calling 'firstloop.m' function.
+
+Similarly, 'setup_asymptomatic.m' file in Reference_Asymptomatic folder can be used to evaluate Asymptomatic model.
+
+Perturbations were performed in Perturbation folder. Additional instructions are given in the Reference_Asymptomatic and Capacity folder on how to generate results, moving it in right directory and running the Rscript to generate figures 4-7 in the main text and supplementary figures 7-13. 
+
+b) POI library path needs to be updated accordingly. 
 
 c) home directory must contain following functions: ‘R0calc.m’, ‘xlwrite.m’ and ‘Func_replace_string.m’
 
