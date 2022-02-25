@@ -3,14 +3,20 @@
 **To generate Capacity Model single simulation:**
 1) run 'exp_cap.m' file
 2) run the following:
-  mkdir CapacResults
-  mv *.mat CapacResults
-  mv *.csv CapacResults
-  mv CapacResults Perturbation
+  
+    mkdir CapacResults
+  
+    mv *.mat CapacResults
+  
+    mv *.csv CapacResults
+  
+   mv CapacResults Perturbation
 
 **To do perturbation analysis:**
 1) run the following:
+
     cd Perturbation
+    
     run 'captTest_perD.m' --> it generates perturbed simulation for Capacity, MaxCap and Testing(Early&Late) Models
 
 **To generate plots:**
@@ -22,14 +28,21 @@
 **To generate alpha perturbation:**
 1) run 'exp_cap.m' file with different alpha values
 2) for each run with each alpha value
+
     run the following:
+    
       mkdir alpha*
+      
       mv *.mat alpha*
+      
       mv *.csv alpha
+      
       mv alpha Perturbation
+      
       e.g. alpha=0.2 --> *=02
       
 3) run the following:
+
     cd Perturbation
     
     run 'AlphaPerturb.m' --> WARNING: change the ALPHA variable at the beginning of the script with the name of the generated alpha* folders
