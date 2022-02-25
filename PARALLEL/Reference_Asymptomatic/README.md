@@ -2,6 +2,7 @@
 
 **Steps to generate Reference Model single simulation:**
 
+After proper setting up POI library in MATLAB:
 1) run 'setup_reference.m' file
 2) run the following:
   mkdir Ref_results
@@ -10,6 +11,7 @@
   mv Ref_results Perturbation
 
 **Steps to generate Asymptomatic Model single simulation:**
+After proper setting up POI library in MATLAB:
 1) run 'setup_asymptomatic.m' file
 2) run the following:
   mkdir Asymp_results
