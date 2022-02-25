@@ -1,20 +1,21 @@
 # Reference and Asymptomatic models
 
-** To generate Reference Model single simulation:**
--- run 'setup_reference.m' file
--- run the following:
-mkdir Ref_results
-mv *.mat Ref_results
-mv *.csv Ref_results
-mv Ref_results Perturbation
+**Steps to generate Reference Model single simulation:**
 
---> generate Asymptomatic Model single simulation:
--- run 'setup_asymptomatic.m' file
--- run the following:
-mkdir Asymp_results
-mv *.mat Asymp_results
-mv *.csv Asymp_results
-mv Asymp_results Perturbation
+1) run 'setup_reference.m' file
+2) run the following:
+  mkdir Ref_results
+  mv *.mat Ref_results
+  mv *.csv Ref_results
+  mv Ref_results Perturbation
+
+**Steps to generate Asymptomatic Model single simulation:**
+1) run 'setup_asymptomatic.m' file
+2) run the following:
+  mkdir Asymp_results
+  mv *.mat Asymp_results
+  mv *.csv Asymp_results
+  mv Asymp_results Perturbation
 
 --> perturbation:
 run the following:
