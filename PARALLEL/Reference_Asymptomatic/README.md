@@ -4,28 +4,30 @@
 
 After proper setting up POI library in MATLAB:
 1) run 'setup_reference.m' file
-2) run the following:
+2) run the following:  
 
-  mkdir Ref_results
+    mkdir Ref_results  
+    
+    mv *.mat Ref_results
   
-  mv *.mat Ref_results
+    mv *.csv Ref_results
   
-  mv *.csv Ref_results
-  
-  mv Ref_results Perturbation
+    mv Ref_results Perturbation
 
 **Steps to generate Asymptomatic Model single simulation:**
+
 After proper setting up POI library in MATLAB:
+
 1) run 'setup_asymptomatic.m' file
 2) run the following:
-
-  mkdir Asymp_results
+    
+    mkdir Asymp_results
   
-  mv *.mat Asymp_results
+    mv *.mat Asymp_results
   
-  mv *.csv Asymp_results
+    mv *.csv Asymp_results
   
-  mv Asymp_results Perturbation
+     mv Asymp_results Perturbation
 
 **Steps for perturbation analysis:**
 1) run the following:
