@@ -20,8 +20,11 @@ After proper setting up POI library in MATLAB:
 2) run the following:
 
   mkdir Asymp_results
+  
   mv *.mat Asymp_results
+  
   mv *.csv Asymp_results
+  
   mv Asymp_results Perturbation
 
 **Steps for perturbation analysis:**
