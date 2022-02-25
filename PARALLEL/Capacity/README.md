@@ -31,5 +31,7 @@
       
 3) run the following:
     cd Perturbation
+    
     run 'AlphaPerturb.m' --> WARNING: change the ALPHA variable at the beginning of the script with the name of the generated alpha* folders
+    
     run 'onlyDead_15122021.R' --> WARNING: change the alphaAA variable at the beginning of the script with the name of the generate alpha* folders
