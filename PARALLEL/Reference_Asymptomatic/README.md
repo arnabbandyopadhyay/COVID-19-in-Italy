@@ -21,11 +21,15 @@ After proper setting up POI library in MATLAB:
 
 **Steps for perturbation analysis:**
 1) run the following:
+
     cd Perturbation
+    
     run 'ReferPert.m' --> it generates perturbed simulation for Reference and Testing(Early&Late) Model
+    
     run 'AsympPert.m' --> it generates perturbed simulations for Asymptomatic Model
 
 **Steps to generate plots:**
 1) run 'DOPAR_fit_rt.R' --> it generates main and supplementary fit(from Ref.Mod.) and Rt plots(Ref and Asymp comparison)
+
 2) run 'DOPAR_Testing.R' --> it generates main and supplementary figures for the Early and Late Tesing Model
 
