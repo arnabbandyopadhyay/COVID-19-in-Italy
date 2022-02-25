@@ -1,6 +1,6 @@
-Reference and Asymptomatic models
+# Reference and Asymptomatic models
 
---> generate Reference Model single simulation:
+** To generate Reference Model single simulation:**
 -- run 'setup_reference.m' file
 -- run the following:
 mkdir Ref_results
