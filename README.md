@@ -26,6 +26,8 @@ https://github.com/Data2Dynamics/d2d/wiki/Installation
 
 POI library
 
+**Note**
+It takes approximately one one hour (on Intel Xeon processor @ 3.30GHz) for a single region and for the full dataset. The code is already parallelized in MATLAB and therefore depending upon the availability of cores multiple regions can be evaluated simultaneously.
 
 **Folder organization**
 
