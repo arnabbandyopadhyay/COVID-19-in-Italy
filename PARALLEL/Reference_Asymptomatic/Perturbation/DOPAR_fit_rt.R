@@ -247,8 +247,8 @@ xlab('')
 
 pp <- ggplot(mainRt, aes(x=as.Date(Time, origin='2020-02-24',by='days'), y=value, col=Model)) +
 geom_line() +
-geom_ribbon(aes(ymin=value-ci, ymax=value+ci, fill=Model),col=NA, alpha=0.5) +
-#geom_ribbon(aes(ymin=value-sd, ymax=value+sd, fill=Model),col=NA, alpha=0.5) +
+#geom_ribbon(aes(ymin=value-ci, ymax=value+ci, fill=Model),col=NA, alpha=0.5) +
+geom_ribbon(aes(ymin=value-sd, ymax=value+sd, fill=Model),col=NA, alpha=0.5) +
 geom_hline(aes(yintercept=1),col='black') +
 geom_vline(aes(xintercept=as.Date('2020-03-08')),col='dark red') +
 geom_vline(aes(xintercept=as.Date('2020-05-17')),col='dark green') +
@@ -272,8 +272,8 @@ ggtitle('B')
 
 ppsupp <- ggplot(supplRt, aes(x=as.Date(Time, origin='2020-02-24',by='days'), y=value, col=Model)) +
 geom_line() +
-geom_ribbon(aes(ymin=value-ci, ymax=value+ci, fill=Model),col=NA, alpha=0.5) +
-#geom_ribbon(aes(ymin=value-sd, ymax=value+sd, fill=Model),col=NA, alpha=0.5) +
+#geom_ribbon(aes(ymin=value-ci, ymax=value+ci, fill=Model),col=NA, alpha=0.5) +
+geom_ribbon(aes(ymin=value-sd, ymax=value+sd, fill=Model),col=NA, alpha=0.5) +
 geom_hline(aes(yintercept=1),col='black') +
 geom_vline(aes(xintercept=as.Date('2020-03-08')),col='dark red') +
 geom_vline(aes(xintercept=as.Date('2020-05-17')),col='dark green') +
