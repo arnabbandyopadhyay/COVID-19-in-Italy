@@ -42,7 +42,7 @@ a) Model equations, observables and initial conditions are declared in the model
 
 ‘model_loop_2_*region_name*.def’ is a template file where all initial conditions are empty as the initial conditions of current window is filled by the state space of the previous window and is modified on the way. This file was used in windowing procedure.
 
-'setup_reference.m' file in Reference_Asymptomatic folder will modify the template files and call 'firstloop.m' function that will estimate parameter by using a moving-window technique of size 7 days and by using data. 
+'setup_reference.m' file in Reference_Asymptomatic folder will modify the template files and call 'firstloop.m' function that will estimate parameters by using a moving-window technique of size 7 days and by using data. 
 
 Similarly, 'setup_asymptomatic.m' file in Reference_Asymptomatic folder can be used to evaluate Asymptomatic model.
 
