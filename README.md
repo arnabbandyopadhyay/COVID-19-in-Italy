@@ -59,3 +59,7 @@ Data folder contain data of all regions as of 23 July, 2020 and downloaded from 
 **Demo**
 
 Demo folder contains first two months of Italy data (Data folder in Demo and Demo_code). It takes ~15 min to execute the reference model or asymptomatic model (respective .m files are in Demo_code) on the dataset provided in the Demo folder. By following the instructions given in the Reference_Asymptomatic folder, part of the Fig 4 (in the main text) can be generated. Keep in mind that results of both reference and asymptomatic model are necessary to place in the respective folder of Perturbation directory to generate Figure 4. To run it on the full dataset of Italy, replace the data file in Data folder in both Demo and Demo_code with the full dataset, located in the PARALLEL>>Data folder. 
+
+# License
+
+The source code is licensed under the MIT license, which is available in the LICENSE.txt file.
